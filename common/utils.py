@@ -16,12 +16,12 @@ def is_phone_num(phone_num):
     return True if PHONE_PATTERN.match(phone_num.strip()) else False
 
 
-def gen_random_code(length = 4):
+def gen_random_code(length=4):
 
     if not isinstance(length,int):
         length = 1
 
-    if length <=0:
+    if length <= 0:
         length = 1
 
     code = random.randrange(10**(length-1),10**length)

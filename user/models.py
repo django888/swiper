@@ -16,6 +16,8 @@ class User(models.Model):
         ('bj', '北京'),
         ('sz', '深圳'),
         ('hz', '杭州'),
+        ('cd', '成都'),
+        ('sh', '上海'),
 
     )
     phonenum = models.CharField(max_length=32,unique=True)

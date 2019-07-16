@@ -9,8 +9,20 @@ def verify_phone(request):
 
     phone_num = request.POST.get('phone_num')
 
+    # if is_phone_num(phone_num):
+    #
+    #     # logics.send_virify_code(phone_num)
+    #     return render_json()
+    # else:
+    #     return render_json(code=PHONE_NUM_ERROR)
+
+
     if is_phone_num(phone_num):
-        logics.send_virify_code(phone_num)
-        return render_json()
+
+        if logics.send_virify_code(phone_num):
+            return render_json()
+        else:
+
+            return render_json(code=SMS_SEND_ERROR)
     else:
         return render_json(code=PHONE_NUM_ERROR)
