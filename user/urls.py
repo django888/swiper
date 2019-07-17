@@ -4,6 +4,10 @@ from user.views import *
 from user.apis import *
 urlpatterns = [
     path('app/',index),
-    path('verify_phone/',verify_phone),
+    path('verify-phone/',verify_phone),
+    path('login/',login),
+    path('get_profile',get_profile),
+    path('change_profile',change_profile),
+
 
 ]

@@ -5,6 +5,7 @@ from django.conf import settings
 
 
 def send_virify_code(phone,code):
+
     if settings.DEBUG:
         print('send_virify_code:',phone,code)
         return True
@@ -16,6 +17,7 @@ def send_virify_code(phone,code):
     params['param'] = code
 
     resp = requests.post(config.YZX_SMS_URL,json=params)
+    print(resp.json())
 
     if resp.status_code == 200:
         ret = resp.json()
