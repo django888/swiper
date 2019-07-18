@@ -48,7 +48,7 @@ class User(models.Model):
     def profile(self):
 
         if not hasattr(self, '_profile'):
-            self._profile, _ = Profile.objects.get_or_create(pk=self.id)
+            self._profile, _ = Profile.objects.get_or_create(pk=self.id)#手动创建1对1关系,两个表的id关联
 
 
         return self._profile
@@ -69,10 +69,12 @@ class User(models.Model):
     # 为用户生成唯一的token
     # def get_or_create_token(self):
     #     key = 'token:{}'.format(self.id)
-    #     token = cache.get(key)
+    #     token = cache.get(key)  先获取token
     #     if not token:
     #         token = 'token***************kahdkejhjkdhkjha'
     #         cache.set(key, token, 24*60*60)
+    #         cache.set(token, uid, 24*60*60)
+
     #     return token
 
     class Meta:
@@ -80,7 +82,7 @@ class User(models.Model):
 
 
 # -------------------------------------------------------------------------------------
-class Profile(models.Model,orm.ModelToDictMixin):
+class Profile(models.Model,orm.ModelToDictMixin):#这里绑定了两个类
     location = models.CharField(max_length=16, choices=LOCATIONS,default='gz',verbose_name='交友城市')
     min_diatance = models.IntegerField(default=0,verbose_name='寻找的最小公里')
     max_diatance = models.IntegerField(default=10,verbose_name='寻找的最大公里')

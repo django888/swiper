@@ -2,6 +2,10 @@ from django import forms
 from user.models import Profile
 
 
+#django表带最大的功能是验证,也可以输出完整html页面,不过样式我们不能控制
+
+
+
 class ProfileFrom(forms.ModelForm):
 
     def clean_max_diatance(self):
@@ -34,5 +38,6 @@ class ProfileFrom(forms.ModelForm):
                   'max_diatance',
                   'min_dating_age',
                   'max_dating_age',
+                  'min_diatance',
                   'dating_sex']
         # fields = '__all__'   这一个是可以提取所有,但是我们现在auto-play,不需要,所为我们不用这个

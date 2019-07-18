@@ -18,3 +18,5 @@ VERIFY_CODE_ERR = 2003      # 验证码错误
 
 LOGIN_REQUIRED_ERR = 2004   #用户认证错误
 
+ICON_UPLOAD_ERR = 2005      #七牛云下载失败
+

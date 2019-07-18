@@ -23,7 +23,7 @@ class AuthMiddleware(MiddlewareMixin):
         request.user = User.objects.get(pk=uid)
 #         上面这个是应用在apis.py里面get_profish和change_profile里面的,
 #          两个函数都要用这个,以下代码为复杂的写,如果不像上面那样写,就要写成,代码如下
-#         uid = request.POST.get('uid')
+#         uid = request.session.get('uid')   注意这里是session,不是使用POST
 #         user = User.objects.get(pk=uid)
 
 
@@ -33,10 +33,14 @@ class AuthMiddleware(MiddlewareMixin):
 
         # for k,v in request.META.items():
         #     print(k,v)
+        #
+        # token = request.META.get('HTTP_X_SWIPER_AUTH_TOKEN')  #除了HTTP以外其他的随便修改
+        # uid = cache.get(token)
+        #
+        # if not token:
+        #     return render_json(code=LOGIN_REQUIRED_ERR)
+        # request.user = User.objects.get(pk=uid)
 
-#         token = request.META.get('HTTP_X_SWIPER_AUTH_TOKEN')  #除了HTTP以外其他的随便修改
-#         if not token:
-#             return render_json(code=LOGIN_REQUIRED_ERR)
 
 # -----------------------------------------------------------------------------------------
 

@@ -8,6 +8,7 @@ urlpatterns = [
     path('login/',login),
     path('get_profile',get_profile),
     path('change_profile',change_profile),
+    path('upload_icon',upload_icon),
 
 
 ]

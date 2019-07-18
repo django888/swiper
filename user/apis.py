@@ -8,6 +8,9 @@ from django.core.cache import cache
 from user.models import User
 from libs import orm
 from user.forms import ProfileFrom
+import time
+from django.conf import settings
+import os
 
 
 def verify_phone(request):
@@ -70,7 +73,7 @@ def get_profile(request):
 
 
     user = request.user
-    # uid = request.POST.get('uid')
+    # uid = request.session.get('uid')
     # user = User.objects.get(pk=uid)
     return render_json(data=user.profile.to_dict(exclude=['auto_play']))
 
@@ -86,6 +89,31 @@ def change_profile(request):
     else:
         return render_json(data=form.errors)
 
+
+# -------------------------------------------------------------------------------
+def upload_icon(request):
+
+    user = request.user
+    icon = request.FILES.get('avatar')
+    logics.yibu_upload_icon(icon)
+
+    return render_json()
+    # file_name = 'icon-{}'.format(int(time.time()))#这里不设置扩展名,系统自动识别的.
+    #
+    # file_path = logics.upload_icon(file_name,icon)
+    #
+    # ret = logics.upload_qiniuyun(file_name,file_path)
+    #
+    # if ret:
+    #     return render_json()
+    # else:
+    #     return render_json(ICON_UPLOAD_ERR)
+    # # file_path = os.path.join(settings.MEDIA_ROOT,file_name)  #获取文件的路径
+    # # with open(file_path,'wb') as destination:
+    # #     for chunk in icon.chunks():
+    # #         destination.write(chunk)   #chunk方法只有django有,python是没有的
+
+# ------------------------------------------------------------------------------------
 
 
 

@@ -16,7 +16,7 @@
 class ModelToDictMixin():
     def to_dict(self,exclude=[]):
         attr_dict = {}
-        fields = self._meta.fields
+        fields = self._meta.fields#model所有字段的属性
 
         for field in fields:
             field_name = field.attname
