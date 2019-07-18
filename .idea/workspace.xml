@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e10a978-67c2-4096-ba5e-cacd4658072c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/qiniuyun.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/worker/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/worker/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/errors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/orm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swiper/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/swiper/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/qiniuyun.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/qiniuyun.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/apis.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/apis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/logics.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/logics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,8 +52,8 @@
       <file leaf-file-name="apis.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/apis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="100">
+              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -72,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logics.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="logics.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/logics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+            <state relative-caret-position="114">
+              <caret line="63" column="44" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="44" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -84,20 +73,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/worker/config.py">
+      <file leaf-file-name="qiniuyun.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/qiniuyun.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+            <state relative-caret-position="-5">
+              <caret line="18" column="97" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="97" />
+              <folding>
+                <element signature="e#1#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/worker/__init__.py">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="114">
+              <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -107,18 +99,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
               <caret line="123" column="10" selection-start-line="123" selection-end-line="123" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="715">
-              <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -152,13 +132,13 @@
         <option value="$PROJECT_DIR$/user/urls.py" />
         <option value="$PROJECT_DIR$/social/models.py" />
         <option value="$PROJECT_DIR$/swiper/settings.py" />
-        <option value="$PROJECT_DIR$/common/config.py" />
-        <option value="$PROJECT_DIR$/libs/qiniuyun.py" />
         <option value="$PROJECT_DIR$/common/errors.py" />
         <option value="$PROJECT_DIR$/worker/config.py" />
         <option value="$PROJECT_DIR$/worker/__init__.py" />
+        <option value="$PROJECT_DIR$/libs/qiniuyun.py" />
         <option value="$PROJECT_DIR$/user/apis.py" />
         <option value="$PROJECT_DIR$/user/logics.py" />
+        <option value="$PROJECT_DIR$/common/config.py" />
       </list>
     </option>
   </component>
@@ -268,7 +248,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1297" height="620" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -276,8 +255,8 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3448276" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2613909" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.37715518" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2613909" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.22062351" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -599,43 +578,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/worker/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/worker/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="21" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="21" />
           <folding>
             <element signature="e#1#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/qiniuyun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="23" column="53" lean-forward="true" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
-          <folding>
-            <element signature="e#1#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -647,10 +595,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/worker/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/worker/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/qiniuyun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="18" column="97" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="97" />
+          <folding>
+            <element signature="e#1#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/user/apis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="100">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -659,11 +631,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/logics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+        <state relative-caret-position="114">
+          <caret line="63" column="44" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="44" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
         </state>
       </provider>
     </entry>

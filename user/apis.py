@@ -94,8 +94,8 @@ def change_profile(request):
 def upload_icon(request):
 
     user = request.user
-    icon = request.FILES.get('avatar')
-    logics.yibu_upload_icon(icon)
+    avatar = request.FILES.get('avatar')
+    logics.yibu_upload_icon.delay(user,avatar)
 
     return render_json()
     # file_name = 'icon-{}'.format(int(time.time()))#这里不设置扩展名,系统自动识别的.

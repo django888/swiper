@@ -1,11 +1,11 @@
 from django.core.cache import cache
 
-from common import utils, cache_key
+from common import utils, cache_key,config
 from libs import sms,qiniuyun
 from django.conf import settings
 import os,time
 from worker import celery_app
-
+from urllib.parse import urljoin
 
 def send_verify_code(phone_num):
     """
@@ -27,11 +27,11 @@ def send_verify_code(phone_num):
 
 
 
-def upload_icon(file_name,icon):
+def upload_icon(file_name,avatar):
 
     file_path = os.path.join(settings.MEDIA_ROOT,file_name)  #获取文件的路径
     with open(file_path,'wb+') as destination:
-        for chunk in icon.chunks():
+        for chunk in avatar.chunks():
             destination.write(chunk)   #chunk方法只有django有,python是没有的
 
     return file_path
@@ -51,9 +51,17 @@ def upload_qiniuyun(file_name,file_path):
 3.再上传到七牛云
 """
 @celery_app.task
-def yibu_upload_icon(icon):
+def yibu_upload_icon(user,avatar):
 
-    file_name = 'icon-{}'.format(int(time.time()))#这里不设置扩展名,系统自动识别的.
-    file_path = upload_icon(file_name,icon)#调用上面函数
+    file_name = 'avatar-{}'.format(int(time.time()))#这里不设置扩展名,系统自动识别的.
+    file_path = upload_icon(file_name,avatar)#调用上面函数
 
-    upload_qiniuyun(file_name,file_path)#调用上面函数
+    ret = upload_qiniuyun(file_name,file_path)#调用上面函数
+    print(ret)
+
+    if ret:
+        # user.icon = config.QN_HOST + '/' + file_name
+        user.avatar = urljoin(config.QN_HOST,file_name)
+        print(user.avatar)
+
+        user.save()
