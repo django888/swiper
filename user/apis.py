@@ -91,7 +91,7 @@ def change_profile(request):
 
 
 # -------------------------------------------------------------------------------
-def upload_icon(request):
+def upload_icon(request):    #这是一个上传头像的函数
 
     user = request.user
     avatar = request.FILES.get('avatar')

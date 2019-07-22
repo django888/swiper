@@ -1,5 +1,6 @@
 from common import errors
 from django.http import JsonResponse
+from django.conf import settings
 
 def render_json(code=errors.OK,data=None):
 
@@ -10,7 +11,14 @@ def render_json(code=errors.OK,data=None):
     if data:
         result['data'] = data
 
-    JDP = {
+    if settings.DEBUG:
+        JDP = {
+            'ensure_ascii':False,
+            'indent':4
+        }
+    else:
+
+        JDP = {
         'separators':(',',':')
     }
 

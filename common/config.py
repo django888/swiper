@@ -21,3 +21,9 @@ QN_ACCESS_KEY = '4vpMQu9M1AfwSQ1emaum_ZkKThaCDc_xIUjrcnOG'
 QN_SECRET_KEY = 'ZvqmARt31wa7cXhLbG7I4CsT4kqxCx8HYnLHr45Z'
 QN_BUCKET_NAME = 'tanyongyao'
 QN_HOST = 'http://putvxycv9.bkt.clouddn.com'
+
+
+
+#社交系统
+
+SWIPE_LIMIT = 3     #每日滑动的上限为3次,最多3次

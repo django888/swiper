@@ -27,7 +27,7 @@ def send_verify_code(phone_num):
 
 
 
-def upload_icon(file_name,avatar):
+def upload_icon(file_name,avatar):    #上传头像的函数
 
     file_path = os.path.join(settings.MEDIA_ROOT,file_name)  #获取文件的路径
     with open(file_path,'wb+') as destination:
@@ -36,7 +36,7 @@ def upload_icon(file_name,avatar):
 
     return file_path
 
-def upload_qiniuyun(file_name,file_path):
+def upload_qiniuyun(file_name,file_path):   #上传到七牛云数据库函数
 
     ret,info = qiniuyun.upload(file_name,file_path)
 
@@ -51,7 +51,7 @@ def upload_qiniuyun(file_name,file_path):
 3.再上传到七牛云
 """
 @celery_app.task
-def yibu_upload_icon(user,avatar):
+def yibu_upload_icon(user,avatar):  #这个函数用于异步提交celery
 
     file_name = 'avatar-{}'.format(int(time.time()))#这里不设置扩展名,系统自动识别的.
     file_path = upload_icon(file_name,avatar)#调用上面函数

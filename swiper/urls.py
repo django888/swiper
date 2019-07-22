@@ -17,4 +17,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('api/user/',include('user.urls')),
+    path('api/social/',include('social.urls')),
+    path('api/vip/',include('vip.urls'))
 ]
