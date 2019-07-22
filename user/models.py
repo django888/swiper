@@ -36,6 +36,9 @@ class User(models.Model):
     avatar = models.CharField(max_length=256,verbose_name='头像')
     location = models.CharField(max_length=16, choices=LOCATIONS,default='gz',verbose_name='你的城市')
 
+    vip_id = models.IntegerField(default=1)
+
+
     @property
     def age(self):
         today = datetime.date.today()
