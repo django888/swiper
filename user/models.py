@@ -3,6 +3,7 @@ import datetime
 from django.db import models
 from django.core.cache import cache
 from libs import orm
+from vip.models import Vip
 
 # Create your models here.
 
@@ -36,7 +37,7 @@ class User(models.Model):
     avatar = models.CharField(max_length=256,verbose_name='头像')
     location = models.CharField(max_length=16, choices=LOCATIONS,default='gz',verbose_name='你的城市')
 
-    vip_id = models.IntegerField(default=1)
+    vip_id = models.IntegerField(default=1)  #这个自己要看看存的差别
 
 
     @property
@@ -45,6 +46,18 @@ class User(models.Model):
         birthday = datetime.date(self.birth_year,self.birth_month,self.birth_day)
 
         return (today - birthday).days //365
+
+
+    @property
+    def vip(self):
+        if not hasattr(self,'_vip'):
+            self._vip = Vip.objects.get(pk=self.vip_id)
+
+        return self._vip
+
+
+
+
 
 
     @property

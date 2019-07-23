@@ -60,5 +60,5 @@ SwipeLinmitError = logic_error('超过上限的错误',3003)        #超过次�
 
 # VIP系统错误
 
-# VipPermError = logic_error()
+VipPermError = logic_error('VipPermError',4001)   #权限错误
 

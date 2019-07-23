@@ -36,7 +36,9 @@ class Swiped(models.Model):#这个表是记录划过的人的每一次操作记�
 
         # cls.objects.update_or_create(uid=uid,sid=sid,mark=mark)   #这行代码用于假如我们mark不止三个选项,增加选项的话,则需要这个代码
 
-        if cls.objects.filter(uid=uid,sid=sid,mark=mark).exists():
+        # if cls.objects.filter(uid=uid,sid=sid,mark=mark).exists():
+        if cls.objects.filter(uid=uid,sid=sid).exists():#这里删除掉mark操作,因为不能同时喜欢不喜欢超级喜欢
+
             return False
         else:
             cls.objects.create(uid=uid, sid=sid, mark=mark)

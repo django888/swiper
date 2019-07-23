@@ -4,6 +4,7 @@ from social import logics
 from social.models import Swiped
 from common.errors import *
 from user.models import User
+from social.permission import has_perm
 # Create your views here.
 
 
@@ -28,7 +29,7 @@ def recommend(request):
 
 
 # --这是一个  喜欢我   的函数/接口---------------------------------------------------------------------------------------------------
-
+@has_perm('like')
 def like(request):
 
     user = request.user
@@ -47,7 +48,7 @@ def like(request):
 
 
 # --这是一个  我不喜欢   的函数/接口---------------------------------------------------------------------------------------------------
-
+@has_perm('dislike')
 def dislike(request):
     user = request.user
 
@@ -63,7 +64,7 @@ def dislike(request):
     return render_json()
 
 # --这是一个  超级喜欢   的函数/接口---------------------------------------------------------------------------------------------------
-
+@has_perm('superlike')
 def superlike(request):
 
     user = request.user
@@ -83,6 +84,7 @@ def superlike(request):
 2.撤销上一次创建的好友关系
 
 """
+@has_perm('rewind')
 def rewind(request):
 
     user = request.user
@@ -102,7 +104,7 @@ uid就是喜欢过我的人, 谁喜欢我就是uid 而我就是sid
 
 
 
-
+@has_perm('like_me')
 def like_me(request):
 
     user = request.user
